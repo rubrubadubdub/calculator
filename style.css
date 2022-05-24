@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Gochi+Hand&family=Waiting+for+the+Sunrise&display=swap');
+body{
+    background-color: #EDEDEF;
+    margin: 0;
+    font-family: 'Gochi Hand', cursive;
+    font-family: 'Waiting for the Sunrise', cursive;
+    text-shadow: 2px 2px 2px #ababab;
+    color: rgb(33, 28, 25);
+
+}
+
+h1{
+    /*font-family: 'Fredericka the Great', cursive;*/
+    font-family: 'Waiting for the Sunrise', cursive;
+
+}
+
+#desk {
+    display:flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    height: 900px;
+    transform:translateY(-3rem);
+    background-image: url("./images/bg-min.jpg");
+    background-position: center;
+}
+
+#calculator{
+    margin-top: -1rem;
+    border: 2.5px solid rgb(33, 28, 25);
+    height: 460px;
+    width: 385px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+     margin-top: 8rem;
+    align-self: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: block;
+}
+
+.typed-out{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    animation: 
+      typing 1.5s steps(20, end) forwards;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 110% }
+  }
+
+  /* CodePen Drawn Boxes */
+  
+  .box1{
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+  }
+  .box2{
+    width:350px;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+  }
+  .box3{
+  border-width: 5px 3px 3px 5px;
+  border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
