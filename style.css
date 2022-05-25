@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Gochi+Hand&family=Waiting+for+the+Sunrise&display=swap');
+
+:root{
+    --pen-color: rgb(33, 28, 25);
+}
+
 body{
     background-color: #EDEDEF;
+    max-height: 850px;
     margin: 0;
     font-family: 'Gochi Hand', cursive;
     font-family: 'Waiting for the Sunrise', cursive;
     text-shadow: 2px 2px 2px #ababab;
-    color: rgb(33, 28, 25);
+    color: var(--pen-color);
 
 }
 
-h1{
+h2{
     /*font-family: 'Fredericka the Great', cursive;*/
     font-family: 'Waiting for the Sunrise', cursive;
+    margin-bottom: 0.1em;
 
 }
 
@@ -27,21 +34,34 @@ h1{
 }
 
 #calculator{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-gap: 1em;
     margin-top: -1rem;
-    border: 2.5px solid rgb(33, 28, 25);
-    height: 460px;
-    width: 385px;
+    padding-left:2rem;
+    height: 500px;
+    width: 350px;
+    background-color: #EDEDEF;
+    box-shadow: 5px 5px 2px 2px #e0e0e3;
+
+}
+
+#output-box{
+    /* width:360px;
+    height: 55px; */
+    margin-top: 1rem;
+}
+
+#numm-pad{
 
 }
 
 .container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
      margin-top: 8rem;
-    align-self: center;
-    align-items: center;
-}
+    }
 
 .wrapper {
     display: block;
@@ -61,21 +81,193 @@ h1{
     to { width: 110% }
   }
 
+.key {
+    background-color: #EDEDEF;
+    box-shadow: 2px 2px 2px 2px #c6c6c8;
+}
+
+.key:hover {
+    background-color: #f5f5f8;
+}
+
+.key.pressed {
+    background-color: #e6e6e9;
+    box-shadow: inset 2px 2px 2px 2px #c7c7ca;
+}
+
+
+
+
   /* CodePen Drawn Boxes */
   
   .box1{
+    border: 2.5px solid var(--pen-color);
     border-width: 3px 4px 3px 5px;
     border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
-    transform: rotate(2deg);
+    transform: rotate(0.5deg);
   }
   .box2{
-    width:350px;
+    border: 2.2px solid var(--pen-color);
     border-width: 3px 3px 5px 5px;
     border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
-    transform: rotate(-2deg);
+    transform: rotate(-0.8deg);
   }
   .box3{
+    border: 2.5px solid var(--pen-color);
   border-width: 5px 3px 3px 5px;
   border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
   transform: rotate(2deg);
+}
+
+
+
+
+
+
+
+
+/* GRID LAYOUT */
+
+.grid-1 {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+  .grid-2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
+
+  /* First Row of Keys */
+
+  .key1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    }
+
+.key2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 8;
+}
+.key3{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 8;
+}
+.key4{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 8;
+}
+ 
+/* second row of keys */
+.key5{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 10;
+    }
+
+.key6{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 10;
+}
+.key7{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 10;
+}
+.key8{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 10;
+}
+
+/* third row of keys */
+.key9{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 12;
+    }
+
+.key10{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+.key11{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+.key12{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+/* fourth row of keys */
+.key13{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 12;
+    grid-row-end: 14;
+    }
+
+.key14{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 12;
+    grid-row-end: 14;
+}
+.key15{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 12;
+    grid-row-end: 14;
+}
+.key16{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 12;
+    grid-row-end: 14;
+}
+
+/* fifth row of keys */
+
+.key17{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 14;
+    grid-row-end: 16;
+    }
+
+.key18{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 14;
+    grid-row-end: 16;
+}
+.key19{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 14;
+    grid-row-end: 16;
 }
