@@ -93,10 +93,26 @@ h2{
 
 }
 
-#output-box{
-    /* width:360px;
-    height: 55px; */
+#output-box {
+    text-align:right;
+    padding: 10px 25px 10px 25px;
     margin-top: 1rem;
+    font-family: 'Gochi Hand', cursive;
+}
+
+#memBox {
+    font-size: 20px;
+    letter-spacing: 1rem;
+    height: 50px;
+    overflow: hidden;
+}
+
+#calcBox {
+    font-size: 45px;
+    font-weight: 400;
+    max-width: 375px;
+    overflow: hidden;
+    letter-spacing:0.1em;
 }
 
 .container {
@@ -185,9 +201,6 @@ h2{
 .hideColorBox {
     visibility: collapse;
   }
-
-
-
 
 /* GRID LAYOUT */
 
